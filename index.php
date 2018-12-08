@@ -37,17 +37,22 @@ $cars = array(
 // 		echo ucfirst($carType) . ' costs ' . $carPrice . '<br>';
 // 	}
 // }
-
+$newCarsArray = [];
 foreach ($cars as $keyCar => $value) {
+	$newCarsArray[] = $keyCar;
 	foreach ($value as $carType => $carPrice) {
 		if ($cars[$keyCar][$carType] === '$12.000') {
 			$carPrice = '$8.000';
 		}	
-		echo ucfirst($carType) . ' costs ' . $carPrice . '<br>';
+		//echo ucfirst($carType) . ' costs ' . $carPrice . '<br>';
+		$newCarsArray[] = $carType;
+		$newCarsArray[] = $carPrice;
 	}
+
 }
 
 
-
+//var_dump($newCarsArray);
+echo "<pre>", var_dump($newCarsArray), "</pre>";
 
 ?>
