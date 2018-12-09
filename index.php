@@ -9,7 +9,7 @@ foreach ($arrayUppercase as $key => $value) {
 	echo ucfirst($key) . ' is ' . ucfirst($value) . '<br>';
 	
 }
-echo '<br>';
+echo '------------------------<br>';
 
 $cars = array(
 	'opel' => array(
@@ -54,5 +54,30 @@ foreach ($cars as $keyCar => $value) {
 
 //var_dump($newCarsArray);
 echo "<pre>", var_dump($newCarsArray), "</pre>";
+
+echo '------------------------<br>';
+
+$num = array(
+	'1' => array(1,2,3,4,5,6,7,8,9,10), 
+	'2' => array(1,2,3,4,5,6,7,8,9,10),
+	'3' => array(1,2,3,4,5,6,7,8,9,10),
+	'4' => array(1,2,3,4,5,6,7,8,9,10),
+	'5' => array(1,2,3,4,5,6,7,8,9,10),
+	'6' => array(1,2,3,4,5,6,7,8,9,10),
+	'7' => array(1,2,3,4,5,6,7,8,9,10),
+	'8' => array(1,2,3,4,5,6,7,8,9,10),
+	'9' => array(1,2,3,4,5,6,7,8,9,10),
+	'10' => array(1,2,3,4,5,6,7,8,9,10)
+	);
+
+
+foreach ($num as $key => $value) {
+	echo $key . '<br>';
+	foreach ($value as $num2) {
+		echo $key . 'x' . $num2 . '=' . $key * $num2 . '<br>';
+	}
+}
+
+
 
 ?>
